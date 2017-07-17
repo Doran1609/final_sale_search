@@ -1,0 +1,33 @@
+<h2 align="center">Products in <%= @company.name %></h2>
+<p>
+    
+    <b>Products details show:</b>
+  
+        <td><div class="img"><%= image_tag @item.image, :style => "height:150px" %></div></td>
+        
+        <td>
+            
+        
+            <div class="title"><p><%= @item.name %></p> </div>
+            <div class="description">Description: <%= @item.description %></div>
+            <div class="description"> Specificacion: <%= @item.specification %></div>
+            <div class="description"> Category: <%= @item.category %></div>
+            <div class="price"> Price: <%= number_to_currency(@item.price, :unit => "€") %></div>
+        
+        
+        </td>
+          
+         <a href="/cart/<%= @item.id %>">Add to Cart</a>
+   
+<tr><td colspan="2">
+    <hr/>    
+</td></tr>   
+
+           
+
+
+
+<%= link_to 'Edit', edit_company_item_path(@company, @item)%> |
+<%= link_to 'Back to the Items company', @company %>
+
+
