@@ -29,7 +29,7 @@
         </td>
         <td class="name"><%= link_to item.name %></td>
         <td class="pricec"><%= number_to_currency(item.price, :unit => "€" ) %></td>
-        <td class="quantity"><%= quantity %><br /></td>
+        <td class="quantity"><%= quantity %><br/></td>
         <td class="priceeee"><%= number_to_currency(quantity * item.price, :unit => "€") %></td>
     </tr>
     <% total += quantity * item.price %>
