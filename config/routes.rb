@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   
   get '/admin' => 'user#admin_login'
   get '/logout' => 'user#logout'
+  get 'users/sign_up' => 'devise/registrations#new'
   
   get '/cart' => 'cart#index' 
   get '/cart/:id' => 'cart#add'
