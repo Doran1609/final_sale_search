@@ -35,7 +35,10 @@
 
 <% end %>
 
+<% if current_user.admin? %>
 
 <div class="new-company-button"> 
 <%= link_to 'Add New Company', new_company_path %>
 </div>
+
+<% end %>

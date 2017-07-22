@@ -62,6 +62,12 @@ class CompaniesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def ensure_admin
+    unless current_user && current_user.admin?
+      render :text => "Access Error Message", :status => :unauthorized
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -2,7 +2,7 @@
 
 <h1 Align="center"> <%= @company.name %> </h1>
 </p>
-
+<% if current_user.admin? %>
 <div class="articale-actions">
     <%= link_to 'Edit', edit_company_path(@company), class: "btn btn-xs btn-primary" %> 
 
@@ -14,6 +14,8 @@
 
   </div>
 </div>
+
+<% end %>
  
 <!-- Display the Items of a company -->
 
@@ -54,7 +56,9 @@
 
 <div class="new-company-button"> 
     <%= link_to 'Back to the list of companies', companies_path %> |
+<% if current_user.admin? %>
     <%= link_to 'New Item', new_company_item_path(@company) %> |
+<% end %>
     <%= link_to 'Show Items', company_items_path(@company) %> 
     
   

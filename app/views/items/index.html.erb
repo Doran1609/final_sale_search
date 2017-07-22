@@ -15,9 +15,13 @@
         <div class="description"> <%= item.description %></div>
         <div class="description"> <%= item.specification %></div>
         <div class="description"> <%= item.category %></div>
+        
+        <% if current_user.admin? %>
         <div class="links"><%= link_to 'Show', company_item_path(@company, item) %> |
                            <%= link_to 'Edit', edit_company_item_path(@company, item) %> |
                            <%= link_to 'Destroy', company_item_path(@company, item), :confirm => 'Are you sure?', :method => :delete %></td> </div>
+       <% end %>
+       
        <div class="price"><%= number_to_currency(item.price, :unit => "Euros ") %> </div>
        <a href="/cart/<%= item.id %>">Add to Cart</a>
    </td> 
@@ -52,7 +56,10 @@
 
 <% end %>
 
-
+<% if current_user.admin? %>
 
 <%= link_to 'New Item', new_company_item_path(@company) %>
+
+<% end %>
+
 <%= link_to 'Back to the Items company', @company %>
