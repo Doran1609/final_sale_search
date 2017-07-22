@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :profiles
+
   devise_for :users
   get 'cart/index'
 
@@ -14,7 +16,8 @@ Rails.application.routes.draw do
   
   get '/cart' => 'cart#index' 
   get '/cart/:id' => 'cart#add'
-  get '/cart/clear' => 'cart#clearCart' 
+  get '/cart/clear' => 'cart#clearCart'
+   get '/signedinuserprofile' => 'profiles#signedinuserprofile'
 
 
   resources :companies do
