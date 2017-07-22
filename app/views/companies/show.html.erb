@@ -21,9 +21,9 @@
 
 <% @company.items.each do |item| %>
 
-<ul class="homecont-list">
+<ul class="homecont2">
     <li>
-        <div class="homecont"> 
+        
     
             <div class="one"> 
                 <h1> <%= link_to item.name, company_item_path(@company, item) %> </h1>
@@ -37,7 +37,7 @@
                <%= number_to_currency(item.price, :unit => "€") %>
             </div>
             
-            <div class="buybtn2">
+            <div class="buybtn">
               <p><a  href="#" class="btn btn-default" role="button">Buy Online</a></p>
             </div> 
             

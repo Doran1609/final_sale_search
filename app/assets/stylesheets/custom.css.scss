@@ -32,7 +32,7 @@ $navbar-new-bg: #000066;
 #container /* space betwen each section */
 {
 	background-color: lightgrey;
-    width: 350px;
+    width: 380px;
     border: 10px solid green;
     padding: 25px;
     margin: 25px;
@@ -100,10 +100,10 @@ $navbar-new-bg: #000066;
 	margin: 5;
 	border: black 2px solid;
 	margin: 10px;
-  padding: 3px;
-  box-sizing: border-box;
-  width: 300px;
-  height: 300px;    
+	padding: 3px;
+	box-sizing: border-box;
+	width: 300px;
+	height: 290px;    
 }
 
 .homecont-list {
@@ -111,7 +111,19 @@ $navbar-new-bg: #000066;
 	padding: 0;
 	display: inline-block;
 	
-	
+}
+
+.homecont2 {
+	margin: 5;
+	border: black 2px solid;
+	margin: 10px;
+	padding: 3px;
+	box-sizing: border-box;
+	width: 300px;
+	height: 310px; 
+	list-style: none;
+	padding: 3px;
+	display: inline-block;
 }
 
 .outside-company {
@@ -275,6 +287,12 @@ $navbar-new-bg: #000066;
 	font-weight: 800;
 	font-size: 14px;
 	text-align: right;
+}
+
+.buybtn .btn-default{
+	margin: -15px;
+	size: 12px;
+	
 }
 
 
