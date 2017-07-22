@@ -25,6 +25,7 @@
 
 <ul class="homecont2">
     <li>
+   
         
     
             <div class="one"> 
@@ -44,7 +45,6 @@
             </div> 
             
     
-        </div>
     </li>
 </ul>
 
@@ -56,14 +56,12 @@
 
 <div class="new-company-button"> 
     <%= link_to 'Back to the list of companies', companies_path %> |
-<% if current_user.admin? %>
-    <%= link_to 'New Item', new_company_item_path(@company) %> |
-<% end %>
+
     <%= link_to 'Show Items', company_items_path(@company) %> 
     
-  
-    
-    
+    <% if current_user.admin? %>
+        <%= link_to 'New Item', new_company_item_path(@company) %> |
+    <% end %>
 </div>
 
 
