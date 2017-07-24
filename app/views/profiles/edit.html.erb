@@ -3,4 +3,6 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @profile %> |
+<% if current_user.admin? %> 
 <%= link_to 'Back', profiles_path %>
+<% end %>
